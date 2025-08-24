@@ -1,0 +1,22 @@
+services:
+  kv:
+    build: .
+    image: moniepoint/kv:latest
+    container_name: kv1
+    ports:
+      - "8080:8080"
+    environment:
+      KV_DATA_DIR: /data
+      SERVICE_ENDPOINT: /kv
+      KV_SYNC_MODE: ALWAYS
+      KV_BATCH_SYNC_EVERY: "100"
+      KV_SYNC_INTERVAL_MS: "50"
+      KV_COMPACT_THRESHOLD_BYTES: "0"
+    volumes:
+      - ".kvdata:/data"	# bind mount; folder sits next to this compose file
+    restart: unless-stopped
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "3"

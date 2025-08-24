@@ -1,0 +1,36 @@
+server:
+  port: 8080
+
+service:
+  endpoint: /kv/v1/
+  
+logging:
+  level.root: INFO
+
+app:
+  api: 
+    logging: 
+      enable: true
+      url-patterns: /kv/*
+      
+# KV tuning (defaults)
+kv:
+  data-dir: /app/data
+  sync-mode: always	# always OR batch
+  
+  # if sync-mode=batch
+  batch-sync-every: 100  
+  sync-interval-ms: 50 
+  compact-threshold-bytes: 0
+  
+## Swagger  
+# (optional) Nice sorting in UI
+springdoc:
+  swagger-ui:
+    enabled: true
+    tagsSorter: alpha
+    operationsSorter: method
+
+# (optional) If you ever want to disable in prod
+  api-docs:
+    enabled: true    
