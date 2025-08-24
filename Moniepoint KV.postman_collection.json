@@ -1,0 +1,141 @@
+{
+	"info": {
+		"_postman_id": "237ed3aa-6655-4acf-b526-dc0f28ee980d",
+		"name": "Moniepoint KV",
+		"description": "Postman collection for testing Moniepoint KV Store Spring Boot service",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "4258585"
+	},
+	"item": [
+		{
+			"name": "Health Check",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/health",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"health"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Key",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/{{key}}",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"{{key}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Put Key",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "Icecream",
+					"options": {
+						"raw": {
+							"language": "text"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/{{key}}",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"{{key}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Key",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/{{key}}",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"{{key}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Batch Insert",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "[\n  {\n    \"key\": \"username9\",\n    \"value\": \"shaikh123\"\n  },\n  {\n    \"key\": \"username10\",\n    \"value\": \"hasnain123\"\n  }\n]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/batchPut",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"batchPut"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Range Query",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/range?start=username1&end=usernamey",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"range"
+					],
+					"query": [
+						{
+							"key": "start",
+							"value": "username1"
+						},
+						{
+							"key": "end",
+							"value": "usernamey"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
