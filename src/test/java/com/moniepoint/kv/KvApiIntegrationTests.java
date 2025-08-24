@@ -54,7 +54,7 @@ class KvApiIntegrationTests {
 				""";
 
 		// Batch insert JSON
-		mvc.perform(post("/kv/v1/batch").contentType(MediaType.APPLICATION_JSON).content(jsonBody))
+		mvc.perform(post("/kv/v1/batchPut").contentType(MediaType.APPLICATION_JSON).content(jsonBody))
 				.andExpect(status().isNoContent());
 
 		// Range query
