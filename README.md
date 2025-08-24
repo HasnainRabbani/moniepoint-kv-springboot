@@ -17,6 +17,12 @@
 > Run the below command from the root directory of the project.
 > Make sure that [docker-compose.yml](https://github.com/HasnainRabbani/moniepoint-kv-springboot/blob/main/docker-compose.yml) file is present.
 
+1. Build the Docker image locally (run this from project root)
+```bash
+docker build -t moniepoint/kv:latest .
+```
+
+2. Start the service with docker compose
 ```bash
 docker compose up -d
 ```
