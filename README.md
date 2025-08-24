@@ -199,7 +199,7 @@ docker build -t moniepoint/kv:latest .
 
 ---
 
-## 🗂️ Project Layout (example)
+## 🗂️ Project Layout
 
 ```
 src/
@@ -231,3 +231,8 @@ docker-compose.yml
 Dockerfile
 Moniepoint KV.postman_collection.json
 ```
+--- 
+## 📘 Documentation
+
+For more detailed information (design notes, troubleshooting, etc.), refer to the [Project Wiki](https://github.com/HasnainRabbani/moniepoint-kv-springboot/wiki/Moniepoint-KV-Springboot).
+
