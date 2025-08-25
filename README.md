@@ -52,7 +52,10 @@ mvn clean package -DskipTests
 > After startup, open **Swagger UI**: [http://localhost:8080/swagger-ui/index.html](http://localhost:8080/swagger-ui/index.html)
 ---
 
-## 📜 API Overview
+## 📜 API / Architecture Overview
+
+<img width="1077" height="958" alt="image" src="https://github.com/user-attachments/assets/cd9a22b3-2056-4ecb-9696-a478a09f233b" />
+
 
 Use **Swagger UI** to explore and try endpoints:
 
